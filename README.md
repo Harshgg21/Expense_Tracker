@@ -323,6 +323,10 @@ This project demonstrates practical frontend development skills, including:
 
 ---
 
+## scope of improvement
+
+There is a slot to be added to this project
+
 ## 📸 Preview
 
 A modern finance dashboard designed to provide a clean and intuitive expense tracking experience with a premium dark fintech UI.
