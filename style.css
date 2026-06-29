@@ -3,43 +3,7 @@
    Theme System & Complete Stylesheet
    ═══════════════════════════════════════════════ */
 
-/* ── CSS Custom Properties (Design Tokens) ── */
-:root {
-  --bg-primary: #0D0D14;
-  --bg-secondary: #13131E;
-  --bg-card: #1A1A2E;
-  --bg-card-hover: #1E1E35;
-  --bg-input: #0F0F1A;
 
-  --accent: #6C63FF;
-  --accent-hover: #5A52E0;
-  --accent-gold: #F0C05A;
-
-  --text-primary: #FFFFFF;
-  --text-secondary: #A0A0B8;
-  --text-muted: #6B6B80;
-
-  --success: #10B981;
-  --error: #EF4444;
-  --warning: #F59E0B;
-
-  --border: rgba(255,255,255,0.08);
-  --border-accent: rgba(108,99,255,0.40);
-
-  --shadow-card: 0 4px 24px rgba(0,0,0,0.40);
-  --shadow-glow: 0 0 30px rgba(108,99,255,0.15);
-
-  --radius-card: 12px;
-  --radius-btn: 8px;
-  --radius-input: 8px;
-  --radius-badge: 20px;
-
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
-
-  --transition: 0.20s ease;
-  --transition-slow: 0.35s ease;
-}
 
 /* ── Reset & Base ── */
 *,
@@ -71,8 +35,8 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(108,99,255,0.08), transparent),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(16,185,129,0.05), transparent);
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(10, 181, 246, 0.10), transparent),
+    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(16, 185, 129, 0.05), transparent);
   pointer-events: none;
   z-index: 0;
 }
@@ -98,9 +62,9 @@ input, select {
   position: sticky;
   top: 0;
   z-index: 100;
-  background: rgba(13,13,20,0.75);
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border);
 }
 
@@ -121,7 +85,7 @@ input, select {
 
 .header__logo-icon {
   display: flex;
-  filter: drop-shadow(0 0 8px rgba(108,99,255,0.35));
+  filter: drop-shadow(0 0 8px rgba(10, 181, 246, 0.35));
 }
 
 .header__logo-text {
@@ -129,7 +93,7 @@ input, select {
   font-weight: 700;
   font-size: 1.35rem;
   letter-spacing: -0.02em;
-  background: linear-gradient(135deg, var(--accent), #A78BFA);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -166,7 +130,7 @@ input, select {
   transform: translateX(-50%);
   width: 420px;
   height: 420px;
-  background: radial-gradient(circle, rgba(108,99,255,0.12) 0%, transparent 70%);
+  background: radial-gradient(circle, rgba(10, 181, 246, 0.12) 0%, transparent 70%);
   border-radius: 50%;
   pointer-events: none;
   animation: pulse-glow 4s ease-in-out infinite;
@@ -187,7 +151,7 @@ input, select {
 }
 
 .hero__accent {
-  background: linear-gradient(135deg, var(--accent), #A78BFA, var(--accent-gold));
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover), var(--accent-gold));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -214,7 +178,9 @@ input, select {
   display: flex;
   align-items: center;
   gap: 1rem;
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 1.5rem;
@@ -235,7 +201,7 @@ input, select {
 
 .summary__card--income::before { background: linear-gradient(90deg, var(--success), #34D399); }
 .summary__card--expense::before { background: linear-gradient(90deg, var(--error), #F87171); }
-.summary__card--balance::before { background: linear-gradient(90deg, var(--accent), #A78BFA); }
+.summary__card--balance::before { background: linear-gradient(90deg, var(--accent), var(--accent-hover)); }
 
 .summary__card:hover {
   transform: translateY(-4px);
@@ -261,7 +227,7 @@ input, select {
   color: var(--error);
 }
 .summary__icon-ring--balance {
-  background: rgba(108,99,255,0.12);
+  background: rgba(10, 181, 246, 0.12);
   color: var(--accent);
 }
 
@@ -293,7 +259,9 @@ input, select {
 
 /* ═══════════ CARD (Shared) ═══════════ */
 .card {
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 1.75rem;
@@ -327,7 +295,7 @@ input, select {
 }
 
 .badge {
-  background: rgba(108,99,255,0.15);
+  background: rgba(10, 181, 246, 0.15);
   color: var(--accent);
   font-size: 0.75rem;
   font-weight: 600;
@@ -389,7 +357,7 @@ input, select {
 
 .form__input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(108,99,255,0.15);
+  box-shadow: 0 0 0 3px rgba(10, 181, 246, 0.15);
 }
 
 .form__input.input-error {
@@ -472,14 +440,14 @@ input, select {
 
 .btn--primary {
   flex: 1;
-  background: linear-gradient(135deg, var(--accent), #8B7EFF);
+  background: linear-gradient(135deg, var(--accent), var(--accent-hover));
   color: #fff;
-  box-shadow: 0 4px 16px rgba(108,99,255,0.3);
+  box-shadow: 0 4px 16px rgba(10, 181, 246, 0.30);
 }
 
 .btn--primary:hover {
-  background: linear-gradient(135deg, var(--accent-hover), #7A6EFF);
-  box-shadow: 0 6px 24px rgba(108,99,255,0.4);
+  background: linear-gradient(135deg, var(--accent-hover), #0081bf);
+  box-shadow: 0 6px 24px rgba(10, 181, 246, 0.45);
   transform: translateY(-1px);
 }
 
@@ -583,7 +551,7 @@ input, select {
 
 .controls__search-input:focus {
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(108,99,255,0.12);
+  box-shadow: 0 0 0 3px rgba(10, 181, 246, 0.12);
 }
 
 .controls__row {
@@ -618,7 +586,7 @@ input, select {
 .controls__filter-btn.active {
   background: var(--accent);
   color: #fff;
-  box-shadow: 0 2px 8px rgba(108,99,255,0.3);
+  box-shadow: 0 2px 8px rgba(10, 181, 246, 0.3);
 }
 
 .controls__sort {
@@ -788,7 +756,9 @@ input, select {
 }
 
 .analytics__card {
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 1.25rem 1.5rem;
@@ -824,7 +794,7 @@ input, select {
 .analytics__ratio {
   width: 100%;
   height: 8px;
-  background: rgba(255,255,255,0.06);
+  background: var(--bg-input);
   border-radius: 100px;
   overflow: hidden;
   margin: 0.5rem 0 0.35rem;
@@ -942,12 +912,14 @@ input, select {
 }
 
 .modal__content {
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
   padding: 2rem;
   text-align: center;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.5);
+  box-shadow: 0 24px 64px rgba(0, 0, 0, 0.15);
 }
 
 .modal__icon {
@@ -1002,10 +974,12 @@ input, select {
   align-items: center;
   gap: 0.625rem;
   padding: 0.875rem 1.25rem;
-  background: var(--bg-card);
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border: 1px solid var(--border);
   border-radius: var(--radius-card);
-  box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
   font-size: 0.88rem;
   font-weight: 500;
   color: var(--text-primary);

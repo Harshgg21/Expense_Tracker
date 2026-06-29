@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&family=Inter:wght@400;500;600&display=swap');
+
+:root {
+  /* Backgrounds */
+  --bg-primary: linear-gradient(180deg, #c7ebff 0%, #e0f2fe 30%, #f8fafc 100%);
+  --bg-secondary: #FFFFFF;
+  --bg-card: #FFFFFF;
+  --bg-card-hover: #F1F5F9;
+  --bg-input: #F8FAFC;
+
+  /* Accents */
+  --accent: #0ab5f6;
+  --accent-hover: #009be6;
+  --accent-gold: #F0C05A;
+
+  /* Text */
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --text-muted: #A0AEC0;
+
+  /* Semantic */
+  --success: #10B981;
+  --error: #EF4444;
+  --warning: #F59E0B;
+
+  /* Borders & Shadows */
+  --border: rgba(0,0,0,0.05);
+  --border-accent: rgba(10, 181, 246, 0.40);
+  --shadow-card: 0 10px 30px rgba(0,0,0,0.05);
+  --shadow-glow: 0 0 30px rgba(10, 181, 246, 0.15);
+
+  /* Sizing */
+  --radius-card: 12px;
+  --radius-btn: 8px;
+  --radius-input: 8px;
+  --radius-badge: 20px;
+
+  /* Typography */
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  /* Transitions */
+  --transition: 0.20s ease;
+  --transition-slow: 0.35s ease;
+}
